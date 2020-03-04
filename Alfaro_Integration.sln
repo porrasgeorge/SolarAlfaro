@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Alfaro_Integration", "Alfaro_Integration\Alfaro_Integration.dtproj", "{9E6F619F-1C72-4A7C-8941-43A18AB2A253}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E6F619F-1C72-4A7C-8941-43A18AB2A253}.Development|Default.ActiveCfg = Development
+		{9E6F619F-1C72-4A7C-8941-43A18AB2A253}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {840FB225-227D-483A-A78A-FAE0A9910A30}
+	EndGlobalSection
+EndGlobal

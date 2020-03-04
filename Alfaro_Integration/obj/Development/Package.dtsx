@@ -1,0 +1,2860 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/4/2020 11:04:56 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CRONOS"
+  DTS:CreatorName="CRONOS\Administrador"
+  DTS:DTSID="{DA94D3DB-3EC0-4D50-A8C1-44422872CF97}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{B1AB48E7-4A2D-46A9-A0D3-E0CF40A42D49}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{85B99FDA-7138-4DC1-BEEA-C93A6A23F71D}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::CurrentFile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date time"
+              DTS:DTSID="{BDB16089-8341-4C64-947E-29AE8C1581FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;Avg"
+              DTS:DTSID="{8BB18045-470F-44CA-8A46-3E09E129B4FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;Max"
+              DTS:DTSID="{212E7157-664D-404B-8CAF-85C8E8AB4D46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;Min"
+              DTS:DTSID="{A5D63FD8-068A-421D-AC07-7C2B4CFDAEF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;StdDev"
+              DTS:DTSID="{7A74968F-3167-48D7-94DD-D85EFAE6A71D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;Count"
+              DTS:DTSID="{EDC284DF-A3CF-4F98-88D0-92D16A16BCBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anemometer;wind_speed;Median"
+              DTS:DTSID="{BDCB53CA-5A74-4B61-BAA1-F8644F6FCC79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;Avg"
+              DTS:DTSID="{2B934036-D464-445F-A68B-9B612B3FECB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;Max"
+              DTS:DTSID="{074F4F07-1D99-427D-84CB-69E689059A99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;Min"
+              DTS:DTSID="{0CCBFD12-BF04-4F76-8BDE-28787C3306A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;StdDev"
+              DTS:DTSID="{FC5581BB-64D2-48A4-BDA5-43D9CF7588E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;Count"
+              DTS:DTSID="{1245CEA8-A45A-41BD-BF74-C245EF5626C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wind Vane;wind_direction;Median"
+              DTS:DTSID="{B612F2B2-394F-4552-A66C-F9A2640BE841}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;Avg"
+              DTS:DTSID="{0DDB1AF8-80F3-4286-85CD-8669216EBCCE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;Max"
+              DTS:DTSID="{35A21070-D877-407E-B9EF-D65C089BD270}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;Min"
+              DTS:DTSID="{12449871-E2E0-44E5-B67A-F0FF2230E4BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;StdDev"
+              DTS:DTSID="{5BF8FC2D-C0DE-4C49-8D71-F80B91E42CBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;Count"
+              DTS:DTSID="{3A0E580B-1035-4FEA-9C9C-2BD618A0BD62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;humidity;Median"
+              DTS:DTSID="{9A5C8BF1-E914-4E33-A04D-14E6A534B0B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;Avg"
+              DTS:DTSID="{C5578AD2-F23E-4F1D-A657-70A53640E24F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;Max"
+              DTS:DTSID="{39C8EFFB-1328-4C6C-B3FC-1321DCB6D5A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;Min"
+              DTS:DTSID="{0D4A5E45-0266-4DF0-A412-06CCC8B0C004}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;StdDev"
+              DTS:DTSID="{F2AE1DBD-26B4-4B72-905D-A72B61CF00C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;Count"
+              DTS:DTSID="{5711D47D-A446-42A9-AA05-146DE60CFD6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hygro Thermo;temperature;Median"
+              DTS:DTSID="{4E0161C5-35CD-4D55-9275-0A15BD00D514}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;Avg"
+              DTS:DTSID="{43BDB5D0-FDD4-4B08-8D6E-0AF388646DBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;Max"
+              DTS:DTSID="{099CE6E7-598A-45CC-A814-FA25915069D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;Min"
+              DTS:DTSID="{6D6838CC-A6EC-430C-88AF-C99AAA3873EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;StdDev"
+              DTS:DTSID="{A1B2D464-6C5B-48AD-BA24-BA539042375F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;Count"
+              DTS:DTSID="{D801DC1E-C4EE-474D-B267-B63CA39F8DD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Barometer;air_pressure;Median"
+              DTS:DTSID="{6E0F24DD-210D-4AD3-A0ED-A7425C94EFF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Avg"
+              DTS:DTSID="{8D097A4F-1060-4F73-ABDD-5E9D60251D68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Max"
+              DTS:DTSID="{7D4F159A-0896-4DDF-B881-AF0BF520B5A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Min"
+              DTS:DTSID="{D920F980-5716-428F-BBA5-FB6FF601034E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;StdDev"
+              DTS:DTSID="{05C8C84F-FC4B-4897-AFA3-56C8235ED82E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Count"
+              DTS:DTSID="{7F390154-177A-4F76-B08C-AF9BED563903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Sum"
+              DTS:DTSID="{DA723DB5-09D6-4C48-963D-7791F4C1769E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance;Median"
+              DTS:DTSID="{40E0C43A-E6FE-4C88-9CF3-D1E7CB1BD0C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Avg"
+              DTS:DTSID="{E42F95C3-B459-4D76-829F-63D222AC73DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Max"
+              DTS:DTSID="{CF149692-5360-47C7-905B-D15C83323A70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Min"
+              DTS:DTSID="{E8810912-ADAD-4385-BF88-5B6F70BCC7F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;StdDev"
+              DTS:DTSID="{19A5CDAD-5F79-4163-89A8-6949ADAAE99D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Count"
+              DTS:DTSID="{173127CA-BFA7-40BA-AD6A-75F710D21F3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Sum"
+              DTS:DTSID="{7FC615F2-5FB8-4C40-91C2-C9BDF27465FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_diffuse;Median"
+              DTS:DTSID="{CF89664C-71D2-4BDF-84A4-297E29A9C171}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Avg"
+              DTS:DTSID="{E65B39D8-A017-4B1A-8AFA-35C003A27420}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Max"
+              DTS:DTSID="{8571F367-EF9E-44AD-88ED-78D82B951723}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Min"
+              DTS:DTSID="{9F30597F-306D-444A-BD6A-BFA9AFE0DD61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;StdDev"
+              DTS:DTSID="{F8BA5F2F-6B99-43C1-9B03-5680196F3A5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Count"
+              DTS:DTSID="{7F191A35-BA85-4519-952F-A91239A78F3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Sum"
+              DTS:DTSID="{C448BC88-ED8B-47C6-B617-94D21BBCBA36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;solar_irradiance_direct_sw;Median"
+              DTS:DTSID="{9B0648CC-A4D0-4234-83AB-B0265C0FA626}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;sun_status;Count"
+              DTS:DTSID="{79F55562-7778-42BE-98C3-806BBCB86E3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;sun_status;Sum"
+              DTS:DTSID="{5E17420E-E373-4585-BE96-7455E010A046}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;sun_status_sw;Count"
+              DTS:DTSID="{8735B49D-F4E4-4E4C-8F53-B52E2CC72096}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Solar Sensor;sun_status_sw;Sum"
+              DTS:DTSID="{D09A0207-9B8D-44D5-8A54-2043BFD4EFA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;Avg"
+              DTS:DTSID="{FE33F06E-196C-4274-ACD3-136E9F41D189}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;Max"
+              DTS:DTSID="{C42F76EA-7296-4015-8128-E2ADD4874FC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;Min"
+              DTS:DTSID="{893F68B3-58EF-4B2D-AA87-D718D896AE6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;StdDev"
+              DTS:DTSID="{68730F3F-7679-4AC9-AF25-BB5D20A999F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;Count"
+              DTS:DTSID="{9F73B208-DDB4-4447-AA8F-A905B747975A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A1;Median"
+              DTS:DTSID="{B2EEBEF6-AB33-45BB-9FB6-05ED8DC80F8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;Avg"
+              DTS:DTSID="{DB9FB8EA-062C-44C0-92E7-27AF10C7557A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;Max"
+              DTS:DTSID="{9F7219B4-07F1-4E7C-9424-D8D294F8233E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;Min"
+              DTS:DTSID="{01658C64-9569-4574-A6A3-FFA35772C8DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;StdDev"
+              DTS:DTSID="{1472183E-A8A9-46D5-9795-F98B14AC09B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;Count"
+              DTS:DTSID="{E9078B9A-4EF9-4699-AF9A-768F9354A8B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A2;Median"
+              DTS:DTSID="{AA3000D5-4406-4928-BF9B-D6A6D99F13B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;Avg"
+              DTS:DTSID="{1FB7DA4D-9613-4671-9D69-C22BB9217C42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;Max"
+              DTS:DTSID="{21818F97-B665-4532-838D-988EC00CE243}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;Min"
+              DTS:DTSID="{01C9501D-7DD8-4EC5-89AA-7A7243FED8BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;StdDev"
+              DTS:DTSID="{93866489-A8AB-4AE4-8F9F-CE2BDF916150}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;Count"
+              DTS:DTSID="{1E6A8764-FC25-4FA6-8D58-05E4567EAE81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A3;Median"
+              DTS:DTSID="{3A640F4B-99DC-4F74-B165-71BAA7E464FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;Avg"
+              DTS:DTSID="{4927BCEE-D1B5-41F2-9905-DDF75F1ED196}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;Max"
+              DTS:DTSID="{8A00B7CC-3143-4AF2-83CF-974EA00611B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;Min"
+              DTS:DTSID="{1A486FDC-43B2-4F8A-9937-33059D9E5BB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;StdDev"
+              DTS:DTSID="{2C934C86-BC9F-4D75-BE04-9F14EA2BB2D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;Count"
+              DTS:DTSID="{678BDCD8-F5C7-48BB-B354-BCBA3F8AE918}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A7;Median"
+              DTS:DTSID="{626ABC9A-0B2F-40C1-AB0C-C2F0D41021D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;Avg"
+              DTS:DTSID="{1E24491E-658E-4084-AA55-B59D80739352}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;Max"
+              DTS:DTSID="{18A3B167-00C9-4CDB-B243-222EA98B4CA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;Min"
+              DTS:DTSID="{7FCA45F1-7AA9-4D29-8D1D-09095ECDEA93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;StdDev"
+              DTS:DTSID="{740A69A0-5B0F-4996-AE7D-B734E688C9C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;Count"
+              DTS:DTSID="{B4BA453A-56A5-4546-B01D-390C568A5E1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="A8;Median"
+              DTS:DTSID="{1D8F27AC-1AF9-4585-9496-2D0AC2048376}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Avg"
+              DTS:DTSID="{98701B7E-8019-4A0A-9962-72CDF2E03A7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Max"
+              DTS:DTSID="{91FB83A2-F923-40D5-A1D0-A39596468C4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Min"
+              DTS:DTSID="{2DB3AFDA-85D5-490C-A78E-4FD617962940}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;StdDev"
+              DTS:DTSID="{6A573BDA-68B2-43C5-BC5D-47B3D0A63DDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Count"
+              DTS:DTSID="{D02D722F-2E09-4424-9AFF-40394AE8D5CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Sum"
+              DTS:DTSID="{A40AD9CD-4DFD-46FA-AB9C-8D64EF24A9A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C8;Median"
+              DTS:DTSID="{36218D81-1CDF-4635-AEFA-0E6B346600A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Avg"
+              DTS:DTSID="{886BA2A5-C318-43BB-B62F-E0AD32A62145}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Max"
+              DTS:DTSID="{EC92964E-FEA1-4F69-9EDE-0307490EF349}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Min"
+              DTS:DTSID="{90484B1C-7CF4-42AF-B3D8-1B20A82E41BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;StdDev"
+              DTS:DTSID="{A9D6AFF5-C831-4159-832A-ED0BA6C63C57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Count"
+              DTS:DTSID="{C946B3E6-1205-4CFD-967A-D2446ECE026D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Sum"
+              DTS:DTSID="{15850ECF-BEFF-4E9A-8D40-77A79922CC7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D1;Median"
+              DTS:DTSID="{68ECAC3E-0FAC-45D6-9260-42D4E5F8FA42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Avg"
+              DTS:DTSID="{B53769F8-6457-4009-8FA2-FDF43D615DB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Max"
+              DTS:DTSID="{8ACC30F2-D8F3-4AB9-89E8-7E31BDAAACC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Min"
+              DTS:DTSID="{C16C380B-6B95-4388-828E-85C77DFEEF97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;StdDev"
+              DTS:DTSID="{95F71743-2EB5-48BC-B909-74A6805FD733}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Count"
+              DTS:DTSID="{004F0481-150E-4D8D-A6BB-2E3B64A0EE08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Sum"
+              DTS:DTSID="{6362479F-3B64-42FF-B5FF-708D901A5622}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="D2;Median"
+              DTS:DTSID="{363D2B14-B3F5-4F5B-AF3C-A894E45082BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="V;Avg"
+              DTS:DTSID="{889FDB5D-E3CE-4D5D-99A7-0482E0519A54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="V;Max"
+              DTS:DTSID="{AF94194B-4A72-43AF-B525-35AA7E27B3A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="V;Min"
+              DTS:DTSID="{73220FBE-529C-45C3-B1E4-67E4B7DD9DC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="I;Avg"
+              DTS:DTSID="{3239DA2C-1528-422B-A8A4-6C9594CFECA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="I;Max"
+              DTS:DTSID="{D4AFC375-77BA-45BA-9B82-D742615C084A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="I;Min"
+              DTS:DTSID="{F2E78B3F-9ED0-4032-B156-53B250282765}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="T;Avg"
+              DTS:DTSID="{95509791-29B0-4B23-A2B6-755BA49E5063}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="T;Max"
+              DTS:DTSID="{3FBF8EB6-100F-4EA8-950A-C44490EF59F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="T;Min"
+              DTS:DTSID="{D957DCBE-E208-45CC-A4B4-3654DA5300AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="addr"
+              DTS:DTSID="{EC0FC28D-4F6D-4FE9-8F5E-6F9C23D5D03C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CRONOS\UTN01.Alfaro]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7212FFF7-5CFE-47C3-A6A9-78FA1201FA0B}"
+      DTS:ObjectName="CRONOS\UTN01.Alfaro">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=CRONOS\UTN01;Initial Catalog=Alfaro;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{03831CDE-889F-469E-864C-81C52994419F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentFile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Contenedor de bucles Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contenedor de bucles Foreach"
+      DTS:DTSID="{DF6FD2A2-51C1-4481-9F1B-DEACCB68BF38}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contenedor de bucles Foreach">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{5BCF6797-54F0-4191-8DA3-8B9833EE0555}"
+        DTS:ObjectName="{5BCF6797-54F0-4191-8DA3-8B9833EE0555}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Alfaro Solar\Datos\2019-2020" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tarea Flujo de datos"
+          DTS:DTSID="{D7B3ACE6-01F5-4188-8B7D-4FED24D8978D}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Flujo de datos"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+                  description="Conversión de datos"
+                  name="Conversión de datos"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                      name="Entrada de conversión de datos">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Date time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Date time"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]"
+                      exclusionGroup="1"
+                      name="Salida de conversión de datos"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Date time]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Date time]"
+                          name="Copia de Date time"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                              name="SourceInputColumnLineageID">#{Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de conversión de datos"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+                  description="Destino de OLE DB"
+                  name="Destino de OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                      name="OpenRowset">[dbo].[EstacionSolarAlfaro]</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL para ejecutar."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CRONOS\UTN01.Alfaro]"
+                      connectionManagerRefId="Package.ConnectionManagers[CRONOS\UTN01.Alfaro]"
+                      description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                      errorOrTruncationOperation="Insertar"
+                      errorRowDisposition="RedirectRow"
+                      hasSideEffects="true"
+                      name="Entrada de destino de OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Anemometer;wind_speed;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Anemometer;wind_speed;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anemometer;wind_speed;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Anemometer;wind_speed;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Anemometer;wind_speed;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anemometer;wind_speed;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Wind Vane;wind_direction;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Wind Vane;wind_direction;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Wind Vane;wind_direction;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Wind Vane;wind_direction;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Hygro Thermo;humidity;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Hygro Thermo;humidity;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;humidity;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Hygro Thermo;humidity;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Hygro Thermo;humidity;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;humidity;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Hygro Thermo;temperature;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Hygro Thermo;temperature;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;temperature;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Hygro Thermo;temperature;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Hygro Thermo;temperature;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;temperature;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Barometer;air_pressure;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Barometer;air_pressure;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Barometer;air_pressure;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Barometer;air_pressure;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Barometer;air_pressure;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Barometer;air_pressure;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Solar Sensor;solar_irradiance;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Solar Sensor;solar_irradiance;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Solar Sensor;solar_irradiance;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Solar Sensor;solar_irradiance;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Solar Sensor;solar_irradiance_diffuse;Avg"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Avg]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Solar Sensor;solar_irradiance_diffuse;Max"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Max]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de Date time]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Copia de Date time"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Date time]"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Date time]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Date time]"
+                          dataType="dbTimeStamp"
+                          name="Date time" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anemometer;wind_speed;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anemometer;wind_speed;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Wind Vane;wind_direction;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;humidity;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;humidity;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;temperature;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Hygro Thermo;temperature;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Barometer;air_pressure;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Barometer;air_pressure;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Max" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de destino de OLE DB"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="División condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+                  description="Enruta filas de datos a diferentes salidas según el contenido de los datos. Se usan condiciones (expresiones de SSIS) para especificar las filas que se van a enrutar. Por ejemplo, se usa para separar los registros que deben limpiarse de los registros listos para ser cargados o para enrutar solamente un subconjunto de registros."
+                  name="División condicional"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                      description="Entrada en la transformación División condicional"
+                      name="Entrada de división condicional">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional].Columns[Date time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Date time"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Convertible]"
+                      description="Salida 1 de la transformación División condicional"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="RedirectRow"
+                      exclusionGroup="1"
+                      name="Convertible"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
+                          name="Expression">![ISNULL]((DT_DBTIMESTAMP)#{Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
+                          expressionType="Notify"
+                          name="FriendlyExpression">!ISNULL((DT_DBTIMESTAMP)[Date time])</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida predeterminada de división condicional]"
+                      description="Salida predeterminada de la transformación División condicional"
+                      exclusionGroup="1"
+                      name="Salida predeterminada de división condicional"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional]"
+                      description="Salida de error de la transformación División condicional"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de división condicional"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+                  description="Origen de archivo plano"
+                  localeId="3082"
+                  name="Origen de archivo plano"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica si las columnas de longitud cero se tratan como NULL."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                      connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                      name="Salida de origen de archivo plano">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Date time]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Date time]"
+                          name="Date time"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Avg]"
+                          name="Anemometer;wind_speed;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Anemometer;wind_speed;Max]"
+                          name="Anemometer;wind_speed;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Wind Vane;wind_direction;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Wind Vane;wind_direction;Avg]"
+                          name="Wind Vane;wind_direction;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Avg]"
+                          name="Hygro Thermo;humidity;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;humidity;Max]"
+                          name="Hygro Thermo;humidity;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Avg]"
+                          name="Hygro Thermo;temperature;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Hygro Thermo;temperature;Max]"
+                          name="Hygro Thermo;temperature;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Avg]"
+                          name="Barometer;air_pressure;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Barometer;air_pressure;Max]"
+                          name="Barometer;air_pressure;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Avg]"
+                          name="Solar Sensor;solar_irradiance;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance;Max]"
+                          name="Solar Sensor;solar_irradiance;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          name="Solar Sensor;solar_irradiance_diffuse;Avg"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          name="Solar Sensor;solar_irradiance_diffuse;Max"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Date time]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date time" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Anemometer;wind_speed;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Anemometer;wind_speed;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Wind Vane;wind_direction;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Wind Vane;wind_direction;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;humidity;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;humidity;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Hygro Thermo;temperature;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hygro Thermo;temperature;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Barometer;air_pressure;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Barometer;air_pressure;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_diffuse;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_diffuse;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;solar_irradiance_direct_sw;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;solar_irradiance_direct_sw;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;sun_status;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;sun_status;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;sun_status;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;sun_status;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;sun_status_sw;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;sun_status_sw;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Solar Sensor;sun_status_sw;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Solar Sensor;sun_status_sw;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A1;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A1;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A2;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A2;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A3;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A3;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A7;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A7;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[A8;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="A8;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[C8;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="C8;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D1;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D1;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;StdDev]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;StdDev" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Count]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Count" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Sum]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Sum" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[D2;Median]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="D2;Median" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[V;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="V;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[V;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="V;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[V;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="V;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[I;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="I;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[I;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="I;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[I;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="I;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[T;Avg]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="T;Avg" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[T;Max]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="T;Max" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[T;Min]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="T;Min" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[addr]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="addr" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                      isErrorOut="true"
+                      name="Salida de error de origen de archivo plano">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Columna de salida de error de origen de archivo plano"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                          name="Columna de salida de error de origen de archivo plano" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Convertible]"
+                  endId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Convertible"
+                  startId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Outputs[Convertible]" />
+                <path
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+                  endId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Salida de conversión de datos"
+                  startId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
+                <path
+                  refId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+                  endId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                  name="Salida de origen de archivo plano"
+                  startId="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{E0B0AE10-FCFC-4035-A992-C1DE6094A7C6}"
+          DTS:ObjectName="{E0B0AE10-FCFC-4035-A992-C1DE6094A7C6}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::CurrentFile" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos"
+          TopLeft="44,36" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="276,205"
+          Size="276,248"
+          Id="Package\Contenedor de bucles Foreach"
+          TopLeft="52,49" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Contenedor de bucles Foreach\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Origen de archivo plano"
+          TopLeft="99,30" />
+        <NodeLayout
+          Size="168,46"
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="91,238" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="425,242" />
+        <NodeLayout
+          Size="171,71"
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\División condicional"
+          TopLeft="422,16" />
+        <EdgeLayout
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Convertible]"
+          TopLeft="510,87">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,155"
+              Start="0,0"
+              End="0,147.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,147.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.4938671875,68.87548828125,50.987734375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+          TopLeft="290,51.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="132,0"
+              Start="0,0"
+              End="124.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="124.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contenedor de bucles Foreach\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="425,262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-166,0"
+              Start="0,0"
+              End="-158.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-158.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenedor de bucles Foreach\Tarea Flujo de datos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
